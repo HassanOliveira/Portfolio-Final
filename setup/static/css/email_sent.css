@@ -1,0 +1,74 @@
+.email_sent {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    margin-top: 29vh;
+}
+
+.success_box {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    max-width: 800px;
+    height: 150px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.success_box p {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-size: 18px;
+}
+
+.button_backtohome {
+    /* BOTAO BACK TO HOME PAGE */
+    box-sizing: border-box;
+    margin-left: -65px;
+
+    position: absolute;
+    width: 130px;
+    height: 40px;
+
+    background: #FFA903;
+    border: 1px solid #000000;
+    border-radius: 25px;
+
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    color: #ffffff;
+
+    text-shadow: 
+               -1px -1px 0px #000, 
+               -1px 1px 0px #000,      
+                1px -1px 0px #000,    
+                1px 1px 0px #000;
+}
+
+.button_backtohome:hover {
+    cursor: pointer;
+    margin-top: 2.5px;
+    margin-left: -67.5px;
+
+    width: 140px;
+    height: 45px;
+
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 30px;
+    
+    text-shadow: 
+               -1px -1px 0px #000, 
+               -1px 1px 0px #000,      
+                1px -1px 0px #000,    
+                1px 1px 0px #000;
+}

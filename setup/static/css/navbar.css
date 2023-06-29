@@ -1,0 +1,66 @@
+html, body{
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+}
+
+.nav {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar_menus {
+    display: flex;
+    position: absolute;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    margin-top: 28px;
+    list-style: none;
+}
+
+.menus_left {
+    margin-left: 40px;
+}
+
+.menus_left#first_menu_left {
+    margin-left: -40px;
+}
+
+.menus_left a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.menus_left#last_menu_left {
+    margin-right: 180px;
+}
+
+.menus_right {
+    margin-right: 40px;
+}
+
+.menus_right a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.menus_left:hover {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    transition: 0.1s;
+}
+
+.menus_right:hover {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    transition: 0.1s;
+}

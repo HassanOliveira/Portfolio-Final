@@ -1,0 +1,77 @@
+.construction_page {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    margin-top: 5vh;
+}
+
+.construction_box {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-size: 36px;
+    line-height: 65px;
+    max-width: 800px;
+    height: 350px;
+    background-image: linear-gradient(to bottom, rgb(235, 234, 234, 0.7), rgb(235, 234, 234, 0.7)), url(/static/images/construction.jpg);
+    background-size: cover;
+    background-position: center center;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.success_box p {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-size: 18px;
+}
+
+.button_backtohome {
+    /* BOTAO BACK TO HOME PAGE */
+    box-sizing: border-box;
+    margin-left: -90px;
+
+    position: absolute;
+    width: 180px;
+    height: 60px;
+
+    background: #FFA903;
+    border: 1px solid #000000;
+    border-radius: 25px;
+
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    color: #ffffff;
+
+    text-shadow: 
+               -1px -1px 0px #000, 
+               -1px 1px 0px #000,      
+                1px -1px 0px #000,    
+                1px 1px 0px #000;
+}
+
+.button_backtohome:hover {
+    cursor: pointer;
+    margin-top: -7px;
+    margin-left: -100px;
+
+    width: 200px;
+    height: 70px;
+
+    font-size: 17px;
+    line-height: 17px;
+    border-radius: 30px;
+    
+    text-shadow: 
+               -1px -1px 0px #000, 
+               -1px 1px 0px #000,      
+                1px -1px 0px #000,    
+                1px 1px 0px #000;
+}

@@ -1,0 +1,27 @@
+
+.footer {
+    /* RODAPÉ */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 90px;
+    background: #000000;
+}
+
+.subtitle {
+    /* This site was fully developed and styled by me, using Python Django Framework and Figma. */
+    width: 701px;
+    vertical-align: auto;
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
