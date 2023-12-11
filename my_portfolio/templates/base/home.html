@@ -1,0 +1,69 @@
+{% extends 'base/main.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+<section class="home">
+    <section class="presentation">
+        <div>
+            <h1 class="myname">Hi! My name</h1>
+
+            <h1 class="hassan">is <span style="font-weight: 400">Hassan</span></h1>
+        </div>
+
+        <div class="describe">
+            <p>I am a Brazilian student at the École Centrale Méditerranée
+                and passionate about coding. If you want to know more 
+                about my projects and my story, please follow these links:
+            </p>
+        </div>
+        <div>
+            {% if cv %}
+                <a href="{{ cv.file.url }}" download>
+                    <button type="button" class="button_download">DOWNLOAD CV</button>
+                </a>
+            {% endif %}
+            <a href="mailto:hassan_bittencourt@hotmail.com"><button type="button" class="button_aboutme">CONTACT ME</button></a>
+        </div>
+    </section>
+
+    <section class="my_photo">
+        <img src="{% static 'images/IMAGEM DE PERFIL.svg' %}" alt="My photo" class="img-responsive">
+    </section>
+
+    <section class="main_container">
+        <h2 class="phrase">"We are who we choose to be... So, choose!" - Spider Man.</h2>
+    </section>
+    <section class="social">
+        <a href="https://www.linkedin.com/in/hassanaboliveira/" target="_blank"><img src="{% static 'images/linkedin.png' %}" alt="linkedin" class="social_media_first" id="linkedin"></a>
+        <a href="https://www.facebook.com/hassan.augustob.deoliveira" target="_blank"><img src="{% static 'images/facebook.png' %}" alt="facebook" class="social_media"></a>
+        <a href="https://www.instagram.com/hassan.augusto/" target="_blank"><img src="{% static 'images/instagram.png' %}" alt="instagram" class="social_media"></a>
+        <a href="https://github.com/HassanOliveira" target="_blank"><img src="{% static 'images/github.png' %}" alt="github" class="social_media"></a>
+    </section>
+    <div id="scroll-to-top" class="hidden">
+        <button onclick="scrollToTop()">^</button>
+    </div>   
+</section>
+<script>
+    // Mostrar ou ocultar o botão com base na posição de rolagem
+    window.onscroll = function() {
+        var scrollButton = document.getElementById("scroll-to-top");
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollButton.style.opacity = "1";
+        } else {
+            scrollButton.style.opacity = "0";
+        }
+    };
+
+    // Rolar suavemente até o topo
+    function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+</script>
+{% endblock content %}

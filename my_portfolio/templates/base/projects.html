@@ -1,0 +1,72 @@
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/projects.css' %}">
+
+<div id="projects-section">
+    <h1 class="title">My Projects</h1>
+    <section class="projects">
+        <div class="cards">
+            <ul class="cards__list">
+                {% if cards %}
+                    {% for project in cards %}
+                        <a href="{{ project.url }}" target="_blank" style="text-decoration: none;">
+                            <li class="card" onclick="openPopup('{{ project.name }}', '{{ project.description }}', '{{ project.photo.url }}', '{{ project.id }}')">
+                                <div class="retangulo">
+                                    {% if project.photo %}
+                                        <img class="card__project" src="{{ project.photo.url }}" alt="foto">
+                                    {% else %}
+                                        <img class="card__project" src="{% static 'images/not-found.png' %}" alt="foto">
+                                    {% endif %}
+                                </div>
+                                <div class="retangulo_branco"></div>
+                                <div class="card__info">
+                                    <p class="card__title">{{ project.name }}</p>
+                                    {% for category in project.category.all %}
+                                        <span class="card__tag">{{ category.name }}</span>
+                                    {% endfor %}
+                                    <div class="card__text">
+                                        <p class="card__description">{{ project.description }}</p>
+                                        <span>
+                                            <img src="{% static 'images/favorite_outline.png' %}" alt="ícone de coração">
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                        </a>
+                        <!-- Pop-up específico para cada projeto
+                        <div class="popup" id="popup_{{ project.id }}">
+                            <span class="close-btn" onclick="closePopup('{{ project.id }}')">&times;</span>
+                            <img id="popupImage_{{ project.id }}" src="" alt="Projeto">
+                            <h2 id="popupTitle_{{ project.id }}"></h2>
+                            <p id="popupDescription_{{ project.id }}"></p>
+                        </div> -->
+                    {% endfor %}
+                {% endif %}
+            </ul>        
+        </div>
+    </section>
+</div>
+
+<!-- <script>
+function openPopup(title, description, imageUrl, projectId) {
+    const popup = document.getElementById(`popup_${projectId}`);
+    const popupImage = document.getElementById(`popupImage_${projectId}`);
+    const popupTitle = document.getElementById(`popupTitle_${projectId}`);
+    const popupDescription = document.getElementById(`popupDescription_${projectId}`);
+
+    popupImage.src = imageUrl;
+    popupTitle.textContent = title;
+    popupDescription.textContent = description;
+
+    popup.classList.add('show-popup');
+}
+
+function closePopup(projectId) {
+    const popup = document.getElementById(`popup_${projectId}`);
+    // Fecha o pop-up removendo a classe
+    popup.classList.remove('show-popup');
+}
+</script> -->
+
+{% endblock content %}

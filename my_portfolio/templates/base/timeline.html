@@ -1,0 +1,78 @@
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/timeline.css' %}">
+
+<section id="timeline">
+    {% for item in timeline_items %}
+    <div class="tl-item">
+        <div class="tl-bg" style="background-image: url('{{ item.image.url }}')"></div>
+        <div class="tl-year">
+            <p class="f2 heading--sanSerif">{{ item.date }}</p>
+            <p class="f2 heading--sanSerif">{{ item.title }}</p>
+        </div>
+        <div class="tl-content">
+            <h1>{{ item.company }}</h1>
+            <p>{{ item.content|safe }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var timeline = document.getElementById('timeline');
+      var numItems = timeline.children.length;
+      timeline.style.setProperty('--num-items', numItems);
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".tl-item").each(function() {
+        var $tlItem = $(this);
+        var $tlBg = $tlItem.find(".tl-bg");
+        var $tlYear = $tlItem.find(".tl-year p");
+        var $tlYearBar = $tlItem.find(".tl-year");
+
+        var tempImage = new Image();
+        tempImage.src = $tlBg.css("background-image").replace(/url\(['"]?(.*?)['"]?\)/, "$1");
+        tempImage.onload = function() {
+          var canvas = document.createElement("canvas");
+          canvas.width = 1;
+          canvas.height = 1;
+          var context = canvas.getContext("2d");
+          context.drawImage(tempImage, 0, 0, 1, 1);
+          var pixel = context.getImageData(0, 0, 1, 1).data;
+  
+          var isLightColor = pixel[0] > 200 && pixel[1] > 200 && pixel[2] > 200;
+  
+          if (isLightColor) {
+            $tlItem.find(".tl-year p").css("color", "black");
+            $tlItem.find(".tl-year").css({
+            'border-top': '1px solid #000',
+            'border-bottom': '1px solid #000'
+          });
+            $tlItem.mouseover(function() {
+                $tlYear.css("color", "white");
+                $tlYearBar.css({
+                    'border-top': '1px solid white',
+                    'border-bottom': '1px solid white'
+                });
+            });
+
+            $tlItem.mouseout(function() {
+                $tlYear.css("color", "black");
+                $tlYearBar.css({
+                    'border-top': '1px solid black',
+                    'border-bottom': '1px solid black'
+                });
+            });
+          }
+        };
+      });
+    });
+  </script>
+{% endblock content %}
+  

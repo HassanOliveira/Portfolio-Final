@@ -1,0 +1,27 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/projects.css' %}">
+
+            <section class="content">
+                <section class="project">
+                    <div class="project__content">
+                        {% if projects.photo == "" or projects.photo == null %}
+                        <img class="project__image" src="{% static 'images/instagram.png' %}">
+                        {% else %}
+                        <img class="project__image" src="{{project.photo.url}}">
+                        {% endif %}
+                        <div class="project__ingo">
+                            <div class="project__text">
+                                <p class="project__title">{{project.name}}</p>
+                                <p class="project__descricao">{{project.description}}</p>
+                                <p class="project__text">{{project.photo.text}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+{% endblock %}
