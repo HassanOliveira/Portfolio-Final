@@ -5,8 +5,8 @@ services:
     build: .
     command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     volumes:
-      - static_vol:/app/setup/static
-      - media_vol:/app/setup/images
+      - static_vol:/app/setup/static/css
+      - media_vol:/app/setup/static/images
     ports:
       - "8000:8000"
 
