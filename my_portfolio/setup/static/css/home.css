@@ -207,8 +207,9 @@ html, body{
     margin-left: 30px;
 }
 
-/* Media query para telas de 1920x1080 (Full HD) e menores */
-@media screen and (max-width: 1920px) {
+
+/* Media query para telas de 2560x1440 (QHD) e menores */
+@media screen and (max-width: 2560px) {
     .myname{
         /* NAME */
         margin-left: 9.5vw;
@@ -229,22 +230,22 @@ html, body{
     
     .button_download {
         margin-top: 59vh;
-        margin-left: 23.5vw;
+        margin-left: 22vw;
     }
     
     .button_download:hover {
         margin-top: 58.7vh;
-        margin-left: 23.3vw;
+        margin-left: 21.8vw;
     }
     
     .button_aboutme {
         margin-top: 59vh;
-        margin-left: 33vw;
+        margin-left: 31.5vw;
     }
     
     .button_aboutme:hover {
         margin-top: 58.4vh;
-        margin-left: 32.8vw;
+        margin-left: 31.3vw;
     }
 
 
@@ -255,6 +256,109 @@ html, body{
 
     .img-responsive {
         max-width: 85%;
+        height: auto;
+    }
+}
+
+
+/* Media query para telas de 1920x1080 (Full HD) e menores */
+@media screen and (max-width: 1920px) {
+    body { 
+        height: 1024px;
+    }
+    .myname{
+        /* NAME */
+        margin-left: 12vw;
+        margin-top: 8vh;
+        font-size: 4.5em;
+        width: 55vw;
+    }
+    
+    .hassan {
+        margin-top: 19vh;
+        margin-left: 2vw;
+        font-size: 4.5em;
+    }
+    
+    .describe p{
+        /* I am a Brazilian student at the École Centrale Marseille and passionate about coding. If you want to know more about my projects and my story, please follow these links: */
+        margin-left: 13vw;
+        margin-top: 36vh;
+        font-size: 1.6em;
+        width: 380px;
+        line-height: 35px;
+    }
+    
+    .button_download {
+        margin-top: 67vh;
+        margin-left: 18vw;
+
+        width: 139px;
+        height: 43px;
+
+        font-weight: 400;
+        font-size: 14px;
+    }
+    
+    .button_download:hover {
+        margin-top: 66.7vh;
+        margin-left: 17.8vw;
+
+        width: 148px;
+        height: 48px;
+
+        font-weight: 400;
+        font-size: 16px;
+    }
+    
+    .button_aboutme {
+        margin-top: 67vh;
+        margin-left: 28.5vw;
+
+        width: 139px;
+        height: 43px;
+
+        font-weight: 400;
+        font-size: 14px;
+    }
+    
+    .button_aboutme:hover {
+        margin-top: 66.7vh;
+        margin-left: 28.3vw;
+
+        width: 148px;
+        height: 48px;
+
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+
+    .my_photo {
+        margin-left: 50vw;
+        margin-right: 22vw;
+        margin-top: 13vh;
+    }
+
+    .img-responsive {
+        max-width:  100%;
+        height: auto;
+    }
+
+    .phrase {
+        /* "We are who we choose to be... So, choose!" - Spider Man. */
+        margin-top: 74vh;
+        font-size: 1.3em;
+    }
+
+    .social_media_first {
+        width: 30px;
+        height: auto;
+    }
+
+    .social_media {
+        margin-top: 74vh;
+        width: 30px;
         height: auto;
     }
 }

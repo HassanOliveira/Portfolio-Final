@@ -73,12 +73,19 @@ html, body{
 }
 
 
+/* Media query para telas de 2560x1440 (QHD) e menores */
+@media screen and (max-width: 2560px) {
+    .nav {
+        margin-left: 4vw;
+        padding-top: 4vh;
+    }
+}
 
 /* Media query para telas de 1920x1080 (Full HD) e menores */
 @media screen and (max-width: 1920px) {
     .nav {
         margin-left: 4vw;
-        padding-top: 4vh;
+        padding-top: 6vh;
     }
 }
 
