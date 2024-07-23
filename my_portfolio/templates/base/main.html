@@ -10,17 +10,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="{% static 'images/LOGO.png' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/Logo.svg' %}">
 </head>
 <body>
 
-    {% include 'base/navbar.html' %}
+    {% include 'base/navbar.html' with cards=cards %}
 
     {% block content %}
     
     {% endblock content %}
 
-    {% include 'base/timeline.html' with timeline_items=timeline_items %}
+    {% include 'base/experiences.html' with experiences=experiences %}
 
     {% include 'base/projects.html' with cards=cards %}
 

@@ -9,7 +9,7 @@ class Category(models.Model):
         return self.name
 
 
-class Projects(models.Model):
+class Projecty(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
     subtitle = models.CharField(max_length=150, null=False, blank=False)
     category = models.ManyToManyField(Category)
@@ -23,7 +23,7 @@ class Projects(models.Model):
         return self.name
     
 
-class TimelineItem(models.Model):
+class Experience(models.Model):
     title = models.CharField(max_length=255)
     date = models.CharField(max_length=20)
     image = models.ImageField(upload_to='timeline/', default='timeline/construction.jpg')

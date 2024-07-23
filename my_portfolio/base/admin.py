@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from base.models import Projects, Category, TimelineItem, CV
+from base.models import Project, Category, Experience, CV
 class ListingProjects(admin.ModelAdmin):
     list_display = ("id", "name", "subtitle", "published")
     list_display_links = ("id","name")
@@ -9,7 +9,7 @@ class ListingProjects(admin.ModelAdmin):
     list_editable = ("published",)
     list_per_page = 10
 
-admin.site.register(Projects, ListingProjects)
+admin.site.register(Project, ListingProjects)
 admin.site.register(Category)
-admin.site.register(TimelineItem)
+admin.site.register(Experience)
 admin.site.register(CV)

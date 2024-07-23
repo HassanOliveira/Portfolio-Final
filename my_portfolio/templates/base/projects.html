@@ -3,12 +3,12 @@
 
 <link rel="stylesheet" href="{% static 'css/projects.css' %}">
 
-<div id="projects-section">
-    <h1 class="title">My Projects</h1>
-    <section class="projects">
-        <div class="cards">
-            <ul class="cards__list">
-                {% if cards %}
+{% if cards %}
+    <div id="projects-section">
+        <h1 class="title">My Projects</h1>
+        <section class="projects">
+            <div class="cards">
+                <ul class="cards__list">
                     {% for project in cards %}
                         <a href="{{ project.url }}" target="_blank" style="text-decoration: none;">
                             <li class="card" onclick="openPopup('{{ project.name }}', '{{ project.description }}', '{{ project.photo.url }}', '{{ project.id }}')">
@@ -42,11 +42,11 @@
                             <p id="popupDescription_{{ project.id }}"></p>
                         </div> -->
                     {% endfor %}
-                {% endif %}
-            </ul>        
-        </div>
-    </section>
-</div>
+                </ul>        
+            </div>
+        </section>
+    </div>
+{% endif %}
 
 <!-- <script>
 function openPopup(title, description, imageUrl, projectId) {

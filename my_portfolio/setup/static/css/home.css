@@ -6,7 +6,7 @@ html, body{
 }
 
 .home {
-    height: 95vh;
+    height: 91vh;
 }
 
 .presentation {
@@ -263,9 +263,6 @@ html, body{
 
 /* Media query para telas de 1920x1080 (Full HD) e menores */
 @media screen and (max-width: 1920px) {
-    body { 
-        height: 1024px;
-    }
     .myname{
         /* NAME */
         margin-left: 12vw;
@@ -365,9 +362,6 @@ html, body{
 
 /* Media query para telas de 1024x (iPad Pro) e menores */
 @media screen and (max-width: 1024px) {
-    body { 
-        height: 1024px;
-    }
     .myname{
         /* NAME */
         margin-left: 16.5vw;
@@ -468,9 +462,6 @@ html, body{
 
 /* Media query para telas de 820x (iPad Air) e menores */
 @media screen and (max-width: 820px) {
-    body { 
-        height: 820px;
-    }
     .myname{
         /* NAME */
         margin-left: 14.5vw;
@@ -639,9 +630,6 @@ html, body{
 
 /* Media query para telas de 768x1024 (iPad Mini) e menores */
 @media screen and (max-width: 768px) {
-    body { 
-        height: 768px;
-    }
     .myname{
         /* NAME */
         margin-left: 27.5vw;
@@ -740,9 +728,6 @@ html, body{
 
 /* Media query para telas de 430 (Iphone 14 Pro Max) e menores */
 @media screen and (max-width: 430px) {
-    body { 
-        height: 932px;
-    }
     .myname{
         /* NAME */
         margin-left: -15.5vw;
@@ -842,9 +827,6 @@ html, body{
 
 /* Media query para telas de 390x844 (Iphone 12 Pro) e menores */
 @media screen and (max-width: 390px) {
-    body { 
-        height: 844px;
-    }
     .myname{
         /* NAME */
         margin-left: -20.5vw;
