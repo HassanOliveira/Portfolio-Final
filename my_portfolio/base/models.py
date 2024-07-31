@@ -9,7 +9,7 @@ class Category(models.Model):
         return self.name
 
 
-class Projecty(models.Model):
+class Project(models.Model):
     name = models.CharField(max_length=100, null=False, blank=False)
     subtitle = models.CharField(max_length=150, null=False, blank=False)
     category = models.ManyToManyField(Category)

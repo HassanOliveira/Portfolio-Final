@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
     'setup',
-    "django_extensions",
+    'django_extensions',
+    'storages',
+    'sslserver'
 ]
 
 MIDDLEWARE = [
