@@ -8,7 +8,7 @@ COPY .env ./
 
 
 RUN pip install --upgrade pip --no-cache-dir
-RUN pip install -r /app/requirements.txt --no-cache-dir
+RUN pip install -r /app/requirements-linux.txt --no-cache-dir
 
 RUN python manage.py makemigrations
 
