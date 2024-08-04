@@ -29,7 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['https://dev-hbo.com', 'https://www.dev-hbo.com', 'https://*.dev-hbo.com']
+CSRF_TRUSTED_ORIGINS = ['https://dev-hbo.com', 'https://www.dev-hbo.com']
 
 
 # Application definition
@@ -156,6 +156,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = str(os.getenv('EMAIL_HOST_USER'))
 EMAIL_HOST_PASSWORD = str(os.getenv('EMAIL_HOST_PASSWORD'))
 
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = False
-CSRF_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = True
