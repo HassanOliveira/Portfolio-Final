@@ -1,22 +1,27 @@
+version: '3.8'
+
 services:
   django_app:
     build: .
-    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    env_file:
+      - .env
+    command: bash -c "python manage.py collectstatic --noinput && gunicorn setup.wsgi:application --bind 0.0.0.0:8000"
     volumes:
-      - static_vol:/app/setup/static/css
-      - media_vol:/app/setup/static/images
+      - static_vol:/app/setup/static
+      - media_vol:/app/setup/media
     ports:
       - "8000:8000"
 
   nginx:
     build: ./nginx
     volumes:
-      - static_vol:/app/setup/static/css
-      - media_vol:/app/setup/static/images
+      - static_vol:/app/setup/static
+      - media_vol:/app/setup/media
     ports:
-      -  "80:80"
+      - "80:80"
     depends_on:
       - django_app
+
 volumes:
   static_vol:
   media_vol:
